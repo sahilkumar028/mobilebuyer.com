@@ -3,11 +3,13 @@
 
 class GoogleSheetsAPI {
     constructor() {
-        // Your Google Apps Script Web App URL
-        this.scriptURL = 'https://script.google.com/macros/s/AKfycbz5htoRiwm3d9yOso1e55sSxWdZJOnK2UZPJVguXFxKc-IeS8BoS4vMB3_GaI_JoKLq/exec';
+        // Your Google Apps Script Web App URL from environment variables
+        this.scriptURL = process.env.REACT_APP_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbz5htoRiwm3d9yOso1e55sSxWdZJOnK2UZPJVguXFxKc-IeS8BoS4vMB3_GaI_JoKLq/exec';
 
-        // Development mode - set to true when testing locally
-        this.isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        // Development mode - check environment variable first, then hostname
+        this.isDevelopment = process.env.REACT_APP_DEVELOPMENT_MODE === 'true' || 
+                           window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1';
 
         // Force development mode for testing (remove this line for production)
         this.isDevelopment = false;
@@ -16,7 +18,8 @@ class GoogleSheetsAPI {
         console.log('🔧 GoogleSheetsAPI initialized:', {
             hostname: window.location.hostname,
             isDevelopment: this.isDevelopment,
-            scriptURL: this.scriptURL
+            scriptURL: this.scriptURL,
+            envScriptURL: process.env.REACT_APP_GOOGLE_SCRIPT_URL ? 'Set' : 'Not set'
         });
     }
 

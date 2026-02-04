@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "mobilebuyer-in",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_GOOGLE_SCRIPT_URL": "@google-script-url"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_GOOGLE_SCRIPT_URL": "@google-script-url"
+    }
+  }
+}

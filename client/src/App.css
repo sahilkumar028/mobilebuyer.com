@@ -862,8 +862,9 @@ body {
   .locations-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}/
-* Sell Phone Page Styles */
+}
+
+/* Sell Phone Page Styles */
 
 .sell-phone-hero {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -1265,8 +1266,9 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-}/
-* Submit Message Styles */
+}
+
+/* Submit Message Styles */
 .submit-message {
   margin-top: 1rem;
   padding: 1rem;
