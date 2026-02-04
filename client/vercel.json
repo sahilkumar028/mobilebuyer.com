@@ -17,11 +17,11 @@
     }
   ],
   "env": {
-    "REACT_APP_GOOGLE_SCRIPT_URL": "@google-script-url"
+    "REACT_APP_GOOGLE_SCRIPT_URL": "https://script.google.com/macros/s/AKfycbz5htoRiwm3d9yOso1e55sSxWdZJOnK2UZPJVguXFxKc-IeS8BoS4vMB3_GaI_JoKLq/exec"
   },
   "build": {
     "env": {
-      "REACT_APP_GOOGLE_SCRIPT_URL": "@google-script-url"
+      "REACT_APP_GOOGLE_SCRIPT_URL": "https://script.google.com/macros/s/AKfycbz5htoRiwm3d9yOso1e55sSxWdZJOnK2UZPJVguXFxKc-IeS8BoS4vMB3_GaI_JoKLq/exec"
     }
   }
 }
