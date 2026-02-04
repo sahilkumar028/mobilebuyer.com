@@ -11,6 +11,13 @@ import SellPhone from './pages/SellPhone';
 import './App.css';
 
 function App() {
+    // Debug logging for Vercel
+    console.log('🔧 App component loaded');
+    console.log('🔧 Environment variables:', {
+        scriptURL: process.env.REACT_APP_GOOGLE_SCRIPT_URL,
+        nodeEnv: process.env.NODE_ENV
+    });
+
     return (
         <HelmetProvider>
             <Router>
