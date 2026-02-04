@@ -389,4 +389,6 @@ class GoogleSheetsAPI {
     }
 }
 
-export default new GoogleSheetsAPI();
+// Create and export a singleton instance
+const googleSheetsAPI = new GoogleSheetsAPI();
+export default googleSheetsAPI;
