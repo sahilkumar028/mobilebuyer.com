@@ -122,7 +122,7 @@ function handleSellPhoneForm(ss, data) {
       // Add headers
       sheet.getRange(1, 1, 1, 16).setValues([[
         'Timestamp', 'Customer Name', 'Phone', 'Email', 'Brand', 'Model', 
-        'Purchase Year', 'Has Box', 'Has Charger', 'Physical Condition', 
+        'Phone Age (Months)', 'Has Box', 'Has Charger', 'Physical Condition', 
         'Screen Condition', 'Battery Health', 'Estimated Value', 'Pickup Address', 
         'Status', 'Notes'
       ]]);
@@ -143,7 +143,7 @@ function handleSellPhoneForm(ss, data) {
       data.customerEmail || 'N/A',
       data.brand || 'N/A',
       data.model || 'N/A',
-      data.purchaseYear || 'N/A',
+      data.phoneAgeMonths || data.phoneAge || data.purchaseYear || 'N/A',
       data.hasBox || 'N/A',
       data.hasCharger || 'N/A',
       data.physicalCondition || 'N/A',
@@ -201,16 +201,16 @@ function handleContactForm(ss, data) {
       console.log('Using existing "Contact Inquiries" sheet');
     }
     
-    // Prepare row data
+    // Prepare row data - using correct field names from contact form
     const rowData = [
       data.timestamp || new Date().toISOString(),
-      data.name || 'N/A',
-      data.phone || 'N/A',
-      data.email || 'N/A',
-      data.brand || 'N/A',
-      data.model || 'N/A',
-      data.condition || 'N/A',
-      data.service || 'N/A',
+      data.customerName || data.name || 'N/A',
+      data.customerPhone || data.phone || 'N/A',
+      data.customerEmail || data.email || 'N/A',
+      data.phoneBrand || data.brand || 'N/A',
+      data.phoneModel || data.model || 'N/A',
+      data.phoneCondition || data.condition || 'N/A',
+      data.serviceRequired || data.service || 'N/A',
       data.message || 'N/A',
       data.status || 'New Inquiry'
     ];
@@ -292,7 +292,7 @@ function sendEmailNotification(type, data) {
         Phone Details:
         Brand: ${data.brand}
         Model: ${data.model}
-        Year: ${data.purchaseYear}
+        Age: ${data.phoneAgeMonths || data.phoneAge || data.purchaseYear} months old
         Estimated Value: ₹${data.estimatedValue}
         
         Condition:
@@ -310,19 +310,19 @@ function sendEmailNotification(type, data) {
         Please contact the customer within 24 hours.
       `;
     } else if (type === 'contact_form') {
-      subject = `New Contact Inquiry - ${data.service}`;
+      subject = `New Contact Inquiry - ${data.serviceRequired || data.service}`;
       body = `
         New contact form submission:
         
-        Name: ${data.name}
-        Phone: ${data.phone}
-        Email: ${data.email}
-        Service: ${data.service}
+        Name: ${data.customerName || data.name}
+        Phone: ${data.customerPhone || data.phone}
+        Email: ${data.customerEmail || data.email}
+        Service: ${data.serviceRequired || data.service}
         
         Phone Details:
-        Brand: ${data.brand}
-        Model: ${data.model}
-        Condition: ${data.condition}
+        Brand: ${data.phoneBrand || data.brand}
+        Model: ${data.phoneModel || data.model}
+        Condition: ${data.phoneCondition || data.condition}
         
         Message:
         ${data.message}
@@ -393,7 +393,7 @@ function testScript() {
       timestamp: new Date().toISOString(),
       brand: 'apple',
       model: 'iPhone 13',
-      purchaseYear: '2021',
+      phoneAgeMonths: '24',
       hasBox: 'Yes',
       hasCharger: 'Yes',
       physicalCondition: 'good',
@@ -436,6 +436,30 @@ function testScript() {
   }
 }
 
+// Function to manually test contact form submission
+function testContactFormSubmission() {
+  // Simulate a contact form submission
+  const mockEvent = {
+    parameter: {
+      data: JSON.stringify({
+        type: 'contact_form',
+        timestamp: new Date().toISOString(),
+        customerName: 'Test Customer',
+        customerPhone: '9876543210',
+        customerEmail: 'test@mobilebuyer.in',
+        phoneBrand: 'apple',
+        phoneModel: 'iPhone 13',
+        phoneCondition: 'good',
+        serviceRequired: 'sell',
+        message: 'I want to sell my iPhone 13',
+        status: 'New Contact'
+      })
+    }
+  };
+  
+  return doPost(mockEvent);
+}
+
 // Function to manually test form submission
 function testFormSubmission() {
   // Simulate a form submission
@@ -446,7 +470,7 @@ function testFormSubmission() {
         timestamp: new Date().toISOString(),
         brand: 'apple',
         model: 'iPhone 13',
-        purchaseYear: '2021',
+        phoneAgeMonths: '24',
         hasBox: 'Yes',
         hasCharger: 'Yes',
         physicalCondition: 'good',
@@ -461,6 +485,5 @@ function testFormSubmission() {
       })
     }
   };
-  
   return doPost(mockEvent);
 }

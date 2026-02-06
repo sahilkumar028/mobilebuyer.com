@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+/* Force light mode - disable dark mode auto-switching */
+body {
+  background: #ffffff !important;
+  color: #171717 !important;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+/* Ensure all text is visible */
+* {
+  color: inherit;
+}
+
+/* Fix any potential white text on white background */
+.text-white {
+  color: #ffffff !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
