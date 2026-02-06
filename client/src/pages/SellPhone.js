@@ -5,8 +5,9 @@ import GoogleSheetsAPI from '../utils/googleSheets';
 const SellPhone = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    brand: '',
+    company: '',
     model: '',
+    storage: '',
     hasBox: false,
     hasCharger: false,
     condition: '',
@@ -100,14 +101,14 @@ const SellPhone = () => {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     setSubmitMessage('');
-    
+
     try {
       // Submit to Google Sheets
       const result = await GoogleSheetsAPI.submitSellPhoneForm(formData);
-      
+
       if (result.success) {
-        setSubmitMessage('✅ Thank you! We will contact you shortly with a quote for your phone.');
-        
+        setSubmitMessage('✅ Thank you! Our expert will contact you within 2 hours with the best quote for your phone.');
+
         // Optional: Reset form after successful submission
         setTimeout(() => {
           setCurrentStep(1);
@@ -178,16 +179,16 @@ const SellPhone = () => {
       <section className="sell-phone-form">
         <div className="container">
           <div className="form-container">
-            
+
             {/* Step 1: Phone Brand and Model */}
             {currentStep === 1 && (
               <div className="form-step">
                 <h2>Step 1: Select Your Phone</h2>
                 <div className="form-group">
                   <label htmlFor="brand">Phone Brand</label>
-                  <select 
-                    id="brand" 
-                    value={formData.brand} 
+                  <select
+                    id="brand"
+                    value={formData.brand}
                     onChange={(e) => handleInputChange('brand', e.target.value)}
                     required
                   >
@@ -204,9 +205,9 @@ const SellPhone = () => {
                 {formData.brand && (
                   <div className="form-group">
                     <label htmlFor="model">Phone Model</label>
-                    <select 
-                      id="model" 
-                      value={formData.model} 
+                    <select
+                      id="model"
+                      value={formData.model}
                       onChange={(e) => handleInputChange('model', e.target.value)}
                       required
                     >
@@ -220,21 +221,21 @@ const SellPhone = () => {
 
                 <div className="form-group">
                   <label htmlFor="purchaseYear">Purchase Year</label>
-                  <select 
-                    id="purchaseYear" 
-                    value={formData.purchaseYear} 
+                  <select
+                    id="purchaseYear"
+                    value={formData.purchaseYear}
                     onChange={(e) => handleInputChange('purchaseYear', e.target.value)}
                   >
                     <option value="">Select Year</option>
-                    {Array.from({length: 8}, (_, i) => 2024 - i).map(year => (
+                    {Array.from({ length: 8 }, (_, i) => 2024 - i).map(year => (
                       <option key={year} value={year}>{year}</option>
                     ))}
                   </select>
                 </div>
 
                 <div className="step-buttons">
-                  <button 
-                    className="next-btn" 
+                  <button
+                    className="next-btn"
                     onClick={handleNext}
                     disabled={!formData.brand || !formData.model}
                   >
@@ -249,16 +250,16 @@ const SellPhone = () => {
               <div className="form-step">
                 <h2>Step 2: Available Accessories</h2>
                 <p>Do you have the following items with your phone?</p>
-                
+
                 <div className="accessories-grid">
                   <div className="accessory-card">
                     <div className="accessory-icon">📦</div>
                     <h3>Original Box</h3>
                     <div className="radio-group">
                       <label>
-                        <input 
-                          type="radio" 
-                          name="hasBox" 
+                        <input
+                          type="radio"
+                          name="hasBox"
                           value="true"
                           checked={formData.hasBox === true}
                           onChange={() => handleInputChange('hasBox', true)}
@@ -266,9 +267,9 @@ const SellPhone = () => {
                         Yes, I have it
                       </label>
                       <label>
-                        <input 
-                          type="radio" 
-                          name="hasBox" 
+                        <input
+                          type="radio"
+                          name="hasBox"
                           value="false"
                           checked={formData.hasBox === false}
                           onChange={() => handleInputChange('hasBox', false)}
@@ -283,9 +284,9 @@ const SellPhone = () => {
                     <h3>Original Charger</h3>
                     <div className="radio-group">
                       <label>
-                        <input 
-                          type="radio" 
-                          name="hasCharger" 
+                        <input
+                          type="radio"
+                          name="hasCharger"
                           value="true"
                           checked={formData.hasCharger === true}
                           onChange={() => handleInputChange('hasCharger', true)}
@@ -293,9 +294,9 @@ const SellPhone = () => {
                         Yes, I have it
                       </label>
                       <label>
-                        <input 
-                          type="radio" 
-                          name="hasCharger" 
+                        <input
+                          type="radio"
+                          name="hasCharger"
                           value="false"
                           checked={formData.hasCharger === false}
                           onChange={() => handleInputChange('hasCharger', false)}
@@ -310,8 +311,8 @@ const SellPhone = () => {
                   <button className="prev-btn" onClick={handlePrevious}>
                     Previous
                   </button>
-                  <button 
-                    className="next-btn" 
+                  <button
+                    className="next-btn"
                     onClick={handleNext}
                     disabled={formData.hasBox === '' || formData.hasCharger === ''}
                   >
@@ -325,7 +326,7 @@ const SellPhone = () => {
             {currentStep === 3 && (
               <div className="form-step">
                 <h2>Step 3: Phone Condition Assessment</h2>
-                
+
                 <div className="condition-section">
                   <h3>Overall Physical Condition</h3>
                   <div className="condition-options">
@@ -336,9 +337,9 @@ const SellPhone = () => {
                       { value: 'poor', label: 'Poor', desc: 'Heavy wear, multiple scratches' }
                     ].map(option => (
                       <label key={option.value} className="condition-option">
-                        <input 
-                          type="radio" 
-                          name="physicalCondition" 
+                        <input
+                          type="radio"
+                          name="physicalCondition"
                           value={option.value}
                           checked={formData.physicalCondition === option.value}
                           onChange={() => handleInputChange('physicalCondition', option.value)}
@@ -362,9 +363,9 @@ const SellPhone = () => {
                       { value: 'damaged', label: 'Damaged', desc: 'Severe damage, touch issues' }
                     ].map(option => (
                       <label key={option.value} className="condition-option">
-                        <input 
-                          type="radio" 
-                          name="screenCondition" 
+                        <input
+                          type="radio"
+                          name="screenCondition"
                           value={option.value}
                           checked={formData.screenCondition === option.value}
                           onChange={() => handleInputChange('screenCondition', option.value)}
@@ -388,9 +389,9 @@ const SellPhone = () => {
                       { value: 'poor', label: 'Poor (<50%)', desc: 'Very poor battery life' }
                     ].map(option => (
                       <label key={option.value} className="condition-option">
-                        <input 
-                          type="radio" 
-                          name="batteryHealth" 
+                        <input
+                          type="radio"
+                          name="batteryHealth"
                           value={option.value}
                           checked={formData.batteryHealth === option.value}
                           onChange={() => handleInputChange('batteryHealth', option.value)}
@@ -408,8 +409,8 @@ const SellPhone = () => {
                   <button className="prev-btn" onClick={handlePrevious}>
                     Previous
                   </button>
-                  <button 
-                    className="next-btn" 
+                  <button
+                    className="next-btn"
                     onClick={handleNext}
                     disabled={!formData.physicalCondition || !formData.screenCondition || !formData.batteryHealth}
                   >
@@ -423,14 +424,19 @@ const SellPhone = () => {
             {currentStep === 4 && (
               <div className="form-step">
                 <h2>Step 4: Contact Information</h2>
-                <p>We'll contact you with a quote and arrange pickup</p>
-                
+
+                {/* Expert Contact Message */}
+                <div className="expert-contact-info">
+                  <h3>📞 We'll Contact You Soon!</h3>
+                  <p>Our expert will review your phone details and contact you within 2 hours with the best quote. We ensure fair and competitive pricing for all phones.</p>
+                </div>
+
                 <div className="contact-form-grid">
                   <div className="form-group">
                     <label htmlFor="name">Full Name</label>
-                    <input 
-                      type="text" 
-                      id="name" 
+                    <input
+                      type="text"
+                      id="name"
                       value={formData.contactInfo.name}
                       onChange={(e) => handleInputChange('contactInfo.name', e.target.value)}
                       required
@@ -439,9 +445,9 @@ const SellPhone = () => {
 
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
+                    <input
+                      type="tel"
+                      id="phone"
                       value={formData.contactInfo.phone}
                       onChange={(e) => handleInputChange('contactInfo.phone', e.target.value)}
                       required
@@ -450,9 +456,9 @@ const SellPhone = () => {
 
                   <div className="form-group">
                     <label htmlFor="email">Email Address</label>
-                    <input 
-                      type="email" 
-                      id="email" 
+                    <input
+                      type="email"
+                      id="email"
                       value={formData.contactInfo.email}
                       onChange={(e) => handleInputChange('contactInfo.email', e.target.value)}
                       required
@@ -461,8 +467,8 @@ const SellPhone = () => {
 
                   <div className="form-group full-width">
                     <label htmlFor="address">Pickup Address</label>
-                    <textarea 
-                      id="address" 
+                    <textarea
+                      id="address"
                       rows="3"
                       value={formData.contactInfo.address}
                       onChange={(e) => handleInputChange('contactInfo.address', e.target.value)}
@@ -490,12 +496,12 @@ const SellPhone = () => {
                   <button className="prev-btn" onClick={handlePrevious}>
                     Previous
                   </button>
-                  <button 
-                    className="submit-btn" 
+                  <button
+                    className="submit-btn"
                     onClick={handleSubmit}
                     disabled={!formData.contactInfo.name || !formData.contactInfo.phone || !formData.contactInfo.email || isSubmitting}
                   >
-                    {isSubmitting ? 'Submitting...' : 'Get My Quote'}
+                    {isSubmitting ? 'Submitting...' : 'Submit for Quote'}
                   </button>
                 </div>
 

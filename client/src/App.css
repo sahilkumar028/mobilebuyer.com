@@ -1138,6 +1138,27 @@ body {
   font-size: 0.95rem;
 }
 
+/* Expert Contact Info */
+.expert-contact-info {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.expert-contact-info h3 {
+  color: #1565c0;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.expert-contact-info p {
+  color: #1976d2;
+  margin: 0;
+  line-height: 1.5;
+}
+
 .summary-grid div {
   padding: 0.5rem;
   background: white;
