@@ -9,6 +9,13 @@ import type { Metadata } from 'next';
 // since this is a client component. For now, we'll add it via Head component.
 import Head from 'next/head';
 
+// TypeScript declaration for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface Company {
   name: string;
   logo: string;
@@ -355,12 +362,49 @@ export default function SellPhone() {
 
         const jsonResult = JSON.parse(result);
         if (jsonResult.success) {
+          // Track successful form submission for Google Analytics/Ads
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'conversion', {
+              'send_to': 'G-9EFMCNLXRF',
+              'value': 1000,
+              'currency': 'INR'
+            });
+
+            window.gtag('event', 'generate_lead', {
+              'currency': 'INR',
+              'value': 1000,
+              'phone_brand': formData.company,
+              'phone_model': formData.model,
+              'phone_storage': formData.storage,
+              'event_category': 'lead_generation'
+            });
+          }
+
           setSubmitMessage('✅ Thank you! Our expert will contact you within 2 hours with the best quote for your phone.');
         } else {
           setSubmitMessage('❌ ' + (jsonResult.message || 'Submission failed. Please try again.'));
         }
       } catch (parseError) {
         console.log('Response parsing failed, assuming success:', parseError);
+
+        // Track successful form submission for Google Analytics/Ads
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'conversion', {
+            'send_to': 'G-9EFMCNLXRF',
+            'value': 1000,
+            'currency': 'INR'
+          });
+
+          window.gtag('event', 'generate_lead', {
+            'currency': 'INR',
+            'value': 1000,
+            'phone_brand': formData.company,
+            'phone_model': formData.model,
+            'phone_storage': formData.storage,
+            'event_category': 'lead_generation'
+          });
+        }
+
         setSubmitMessage('✅ Thank you! Our expert will contact you within 2 hours with the best quote for your phone.');
       }
 
@@ -482,7 +526,17 @@ export default function SellPhone() {
                           {companies.map(company => (
                             <div
                               key={company.name}
-                              onClick={() => setFormData({ ...formData, company: company.name })}
+                              onClick={() => {
+                                setFormData({ ...formData, company: company.name });
+
+                                // Track company selection for Google Analytics
+                                if (typeof window !== 'undefined' && window.gtag) {
+                                  window.gtag('event', 'select_company', {
+                                    'company_name': company.name,
+                                    'event_category': 'form_interaction'
+                                  });
+                                }
+                              }}
                               className={`p-4 border-2 rounded-lg cursor-pointer transition-all hover:shadow-md ${formData.company === company.name
                                 ? 'border-blue-500 bg-blue-50'
                                 : 'border-gray-200 hover:border-gray-300'

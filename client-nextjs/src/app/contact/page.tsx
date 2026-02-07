@@ -167,7 +167,7 @@ export default function Contact() {
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Call Us</h3>
                 <p className="text-gray-600 mb-4">Speak directly with our experts</p>
                 <a href="tel:+919210657563" className="text-blue-600 hover:text-blue-800 font-semibold block">+91-9210657563</a>
-                <a href="tel:+919205124447" className="text-blue-600 hover:text-blue-800 font-semibold block">+91-9205124447</a>
+                <a href="tel:+919205112447" className="text-blue-600 hover:text-blue-800 font-semibold block">+91-9205112447</a>
                 <small className="text-gray-500">Mon-Sat: 10 AM - 8 PM</small>
               </div>
 
@@ -175,7 +175,7 @@ export default function Contact() {
                 <div className="text-4xl mb-4">📧</div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Email Us</h3>
                 <p className="text-gray-600 mb-4">Send us your queries</p>
-                <a href="mailto:praveen9@gmail.com" className="text-purple-600 hover:text-purple-800 font-semibold block">praveen9@gmail.com</a>
+                <a href="mailto:work.praveen9@gmail.com" className="text-purple-600 hover:text-purple-800 font-semibold block">work.praveen9@gmail.com</a>
                 <a href="mailto:praveen@mobilebuyer.in" className="text-purple-600 hover:text-purple-800 font-semibold block">praveen@mobilebuyer.in</a>
                 <small className="text-gray-500">Response within 24 hours</small>
               </div>
@@ -185,7 +185,7 @@ export default function Contact() {
                 <h3 className="text-xl font-bold mb-2 text-gray-800">WhatsApp</h3>
                 <p className="text-gray-600 mb-4">Quick support via WhatsApp</p>
                 <a href="https://wa.me/919210657563" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 font-semibold block">+91-9210657563</a>
-                <a href="https://wa.me/919205124447" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 font-semibold block">+91-9205124447</a>
+                <a href="https://wa.me/919205112447" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 font-semibold block">+91-9205112447</a>
                 <small className="text-gray-500">Instant responses</small>
               </div>
             </div>
