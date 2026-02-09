@@ -490,6 +490,76 @@ function handleSellPhoneSubmission(data) {
   }
 }
 
+// ============================================================================
+// FORM SUBMISSION HANDLERS
+// ============================================================================
+
+/**
+ * Handle sell phone form submission with dynamic pricing
+ */
+function handleSellPhoneSubmission(data) {
+  try {
+    // Calculate estimated value using dynamic or static data
+    const estimatedValue = calculateEstimatedValue(
+      data.company || data.brand,
+      data.model,
+      data.storage,
+      data.phoneAgeMonths,
+      data.physicalCondition,
+      data.screenCondition,
+      data.batteryHealth,
+      data.hasBox,
+      data.hasCharger
+    );
+    
+    // Get or create the leads sheet
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let sheet = ss.getSheetByName('Sell_Phone_Leads');
+    
+    if (!sheet) {
+      sheet = ss.insertSheet('Sell_Phone_Leads');
+      // Add headers
+      sheet.getRange(1, 1, 1, 15).setValues([[
+        'Timestamp', 'Customer Name', 'Phone', 'Email', 'Company', 'Model', 
+        'Storage', 'Phone Age (Months)', 'Has Box', 'Has Charger', 'Physical Condition', 
+        'Screen Condition', 'Battery Health', 'Estimated Value', 'Pickup Address'
+      ]]);
+      
+      // Format headers
+      sheet.getRange(1, 1, 1, 15).setBackground('#4285f4').setFontColor('white').setFontWeight('bold');
+      sheet.setFrozenRows(1);
+    }
+    
+    // Add the new lead
+    sheet.appendRow([
+      new Date(),
+      data.customerName || 'N/A',
+      data.customerPhone || 'N/A',
+      data.customerEmail || 'N/A',
+      data.company || data.brand || 'N/A',
+      data.model || 'N/A',
+      data.storage || 'N/A',
+      data.phoneAgeMonths || 'N/A',
+      data.hasBox || 'No',
+      data.hasCharger || 'No',
+      data.physicalCondition || 'N/A',
+      data.screenCondition || 'N/A',
+      data.batteryHealth || 'N/A',
+      '₹' + estimatedValue,
+      data.pickupAddress || 'N/A'
+    ]);
+    
+    // Send email notification
+    sendEmailNotification('sell_phone', data, estimatedValue);
+    
+    return {success: true, message: 'Form submitted successfully', estimatedValue: estimatedValue};
+      
+  } catch (error) {
+    console.error('Error handling sell phone submission:', error);
+    return {success: false, message: error.toString()};
+  }
+}
+
 /**
  * Handle contact form submission
  */
@@ -686,6 +756,78 @@ function getStaticBasePrice(company, model, storage) {
   };
   
   return staticPrices[company]?.[model]?.[storage] || 15000;
+}
+
+// ============================================================================
+// EMAIL NOTIFICATIONS
+// ============================================================================
+
+/**
+ * Send email notification for new submissions
+ */
+function sendEmailNotification(type, data, estimatedValue) {
+  try {
+    // Replace with your email address
+    const emailAddress = 'your-email@example.com';
+    
+    let subject, body;
+    
+    if (type === 'sell_phone') {
+      subject = `New Phone Selling Inquiry - ${data.company || data.brand} ${data.model}`;
+      body = `
+New phone selling inquiry:
+
+Customer: ${data.customerName}
+Phone: ${data.customerPhone}
+Email: ${data.customerEmail}
+
+Phone Details:
+Company: ${data.company || data.brand}
+Model: ${data.model}
+Storage: ${data.storage || 'N/A'}
+Age: ${data.phoneAgeMonths} months old
+Estimated Value: ₹${estimatedValue}
+
+Condition:
+Physical: ${data.physicalCondition}
+Screen: ${data.screenCondition}
+Battery: ${data.batteryHealth}
+
+Accessories:
+Box: ${data.hasBox}
+Charger: ${data.hasCharger}
+
+Pickup Address:
+${data.pickupAddress}
+
+Please contact the customer within 2 hours with your quote.
+      `;
+    } else if (type === 'contact_form') {
+      subject = `New Contact Inquiry - ${data.serviceRequired || data.service}`;
+      body = `
+New contact form submission:
+
+Name: ${data.customerName || data.name}
+Phone: ${data.customerPhone || data.phone}
+Email: ${data.customerEmail || data.email}
+Service: ${data.serviceRequired || data.service}
+
+Phone Details:
+Brand: ${data.phoneBrand || data.brand}
+Model: ${data.phoneModel || data.model}
+Condition: ${data.phoneCondition || data.condition}
+
+Message:
+${data.message}
+      `;
+    }
+    
+    // Send email notification
+    MailApp.sendEmail(emailAddress, subject, body);
+    
+  } catch (error) {
+    console.error('Error sending email:', error);
+  }
 }
 
 // ============================================================================
