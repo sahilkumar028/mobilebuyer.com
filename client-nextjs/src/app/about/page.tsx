@@ -113,6 +113,22 @@ export default function About() {
                       Call: +91-9205112447
                     </a>
                   </div>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a 
+                      href="https://wa.me/917669973262"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                    >
+                      WhatsApp: +91-7669973262
+                    </a>
+                    <a 
+                      href="tel:+917669973262"
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                    >
+                      Call: +91-7669973262
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

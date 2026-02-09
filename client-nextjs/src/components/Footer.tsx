@@ -15,9 +15,11 @@ export default function Footer() {
               <p>📧 praveen9@gmail.com</p>
               <p>� +praveen@mobilebuyer.in</p>
               <p>📞 +91-9210657563</p>
-              <p>📞 +91-9205124447</p>
+              <p>📞 +91-9205112447</p>
+              <p>📞 +91-7669973262</p>
               <p>💬 WhatsApp: +91-9210657563</p>
-              <p>💬 WhatsApp: +91-9205124447</p>
+              <p>💬 WhatsApp: +91-9205112447</p>
+              <p>💬 WhatsApp: +91-7669973262</p>
             </div>
           </div>
 

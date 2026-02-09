@@ -31,7 +31,7 @@ export default function Services() {
                 We're working hard to bring you an amazing phone browsing experience. Our inventory will be available online soon!
               </p>
               <p className="text-yellow-700">
-                In the meantime, call us directly to check available phones: <strong>+91-9210657563</strong>
+                In the meantime, call us directly to check available phones: <strong>+91-9210657563</strong> or <strong>+91-7669973262</strong>
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Services() {
                 </ul>
                 <div className="bg-yellow-100 p-4 rounded-lg">
                   <p className="text-yellow-800 font-semibold">Coming Soon Online!</p>
-                  <p className="text-yellow-700">Call +91-9210657563 for current inventory</p>
+                  <p className="text-yellow-700">Call +91-9210657563 or +91-7669973262 for current inventory</p>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ export default function Services() {
                 </ul>
                 <div className="bg-purple-100 p-4 rounded-lg">
                   <p className="text-purple-800 font-semibold">Expert Technicians</p>
-                  <p className="text-purple-700">Call +91-9205124447 for repair quotes</p>
+                  <p className="text-purple-700">Call +91-9205112447 or +91-7669973262 for repair quotes</p>
                 </div>
               </div>
             </div>
@@ -178,10 +178,18 @@ export default function Services() {
                 WhatsApp: +91-9210657563
               </a>
               <a 
-                href="tel:+919205124447"
+                href="https://wa.me/917669973262" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
+              >
+                WhatsApp: +91-7669973262
+              </a>
+              <a 
+                href="tel:+919205112447"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors"
               >
-                Call: +91-9205124447
+                Call: +91-9205112447
               </a>
             </div>
           </div>

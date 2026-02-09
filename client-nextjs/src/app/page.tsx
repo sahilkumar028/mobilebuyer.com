@@ -33,10 +33,10 @@ export default function Home() {
               Trusted Since 2001 - Serving Delhi NCR
             </h2>
             <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
-              Get certified pre-owned smartphones with warranty at unbeatable prices. 
+              Get certified pre-owned smartphones with warranty at unbeatable prices.
               Sell your old phone and get instant cash with our hassle-free process across Delhi, Noida, Gurgaon, Faridabad & Ghaziabad.
             </p>
-            
+
             {/* Structured Data */}
             <script
               type="application/ld+json"
@@ -63,8 +63,15 @@ export default function Home() {
                     },
                     {
                       "@type": "ContactPoint",
-                      "telephone": "+91-9205124447",
+                      "telephone": "+91-9205112447",
                       "contactType": "sales",
+                      "areaServed": ["Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Delhi NCR"],
+                      "availableLanguage": ["English", "Hindi"]
+                    },
+                    {
+                      "@type": "ContactPoint",
+                      "telephone": "+91-7669973262",
+                      "contactType": "customer service",
                       "areaServed": ["Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Delhi NCR"],
                       "availableLanguage": ["English", "Hindi"]
                     }
@@ -78,20 +85,21 @@ export default function Home() {
                   "areaServed": ["Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Delhi NCR"],
                   "sameAs": [
                     "https://wa.me/919210657563",
-                    "https://wa.me/919205124447"
+                    "https://wa.me/919205112447",
+                    "https://wa.me/917669973262"
                   ]
                 })
               }}
             />
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/sell-phone"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
               >
                 Sell Your Phone
               </Link>
-              <Link 
+              <Link
                 href="/services"
                 className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all"
               >
@@ -180,9 +188,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center mt-12">
-              <Link 
+              <Link
                 href="/services"
                 className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all inline-block"
               >
@@ -204,21 +212,29 @@ export default function Home() {
                 <div className="text-4xl mb-4">💬</div>
                 <h3 className="text-xl font-semibold mb-4">WhatsApp Us</h3>
                 <div className="space-y-3">
-                  <a 
-                    href="https://wa.me/919210657563" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/919210657563"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                   >
                     Chat: +91-9210657563
                   </a>
-                  <a 
-                    href="https://wa.me/919205124447" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/919205112447"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                   >
-                    Chat: +91-9205124447
+                    Chat: +91-9205112447
+                  </a>
+                  <a
+                    href="https://wa.me/917669973262"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    Chat: +91-7669973262
                   </a>
                 </div>
               </div>
@@ -228,17 +244,23 @@ export default function Home() {
                 <div className="text-4xl mb-4">📞</div>
                 <h3 className="text-xl font-semibold mb-4">Call Us</h3>
                 <div className="space-y-3">
-                  <a 
+                  <a
                     href="tel:+919210657563"
                     className="block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                   >
                     Call: +91-9210657563
                   </a>
-                  <a 
-                    href="tel:+919205124447"
+                  <a
+                    href="tel:+919205112447"
                     className="block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                   >
-                    Call: +91-9205124447
+                    Call: +91-9205112447
+                  </a>
+                  <a
+                    href="tel:+917669973262"
+                    className="block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    Call: +91-7669973262
                   </a>
                 </div>
               </div>
@@ -294,7 +316,7 @@ export default function Home() {
             <p className="text-xl mb-10 max-w-2xl mx-auto">
               Get an instant quote and turn your old phone into cash today. It's quick, easy, and completely secure.
             </p>
-            <Link 
+            <Link
               href="/sell-phone"
               className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 rounded-lg text-xl font-semibold transition-all transform hover:scale-105 inline-block"
             >

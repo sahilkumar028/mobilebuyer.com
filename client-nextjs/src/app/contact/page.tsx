@@ -168,6 +168,7 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">Speak directly with our experts</p>
                 <a href="tel:+919210657563" className="text-blue-600 hover:text-blue-800 font-semibold block">+91-9210657563</a>
                 <a href="tel:+919205112447" className="text-blue-600 hover:text-blue-800 font-semibold block">+91-9205112447</a>
+                <a href="tel:+917669973262" className="text-blue-600 hover:text-blue-800 font-semibold block">+91-7669973262</a>
                 <small className="text-gray-500">Mon-Sat: 10 AM - 8 PM</small>
               </div>
 
@@ -186,6 +187,7 @@ export default function Contact() {
                 <p className="text-gray-600 mb-4">Quick support via WhatsApp</p>
                 <a href="https://wa.me/919210657563" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 font-semibold block">+91-9210657563</a>
                 <a href="https://wa.me/919205112447" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 font-semibold block">+91-9205112447</a>
+                <a href="https://wa.me/917669973262" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 font-semibold block">+91-7669973262</a>
                 <small className="text-gray-500">Instant responses</small>
               </div>
             </div>
