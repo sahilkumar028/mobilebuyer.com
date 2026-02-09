@@ -189,7 +189,7 @@ If you face CORS issues, ensure your Google Apps Script allows your domain.
 
 ### 5.2 Test All Contact Methods
 - ✅ WhatsApp: +91-9210657563
-- ✅ WhatsApp: +91-9205124447
+- ✅ WhatsApp: +91-9205112447
 - ✅ Phone calls work
 - ✅ Email links work
 

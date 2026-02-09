@@ -3,7 +3,7 @@
 ## ✅ All Business Information Added
 
 ### Contact Information
-- **Phone Numbers**: +91-9210657563, +91-9205124447
+- **Phone Numbers**: +91-9210657563, +91-9205112447, +91-7669973262
 - **WhatsApp**: Both numbers enabled for WhatsApp
 - **Email**: praveen9@gmail.com, praveen@mobilebuyer.in
 - **Support**: Both email addresses for customer support
@@ -86,7 +86,8 @@
 
 ### WhatsApp (Primary)
 - **+91-9210657563**: Main WhatsApp contact
-- **+91-9205124447**: Secondary WhatsApp contact
+- **+91-9205112447**: Secondary WhatsApp contact
+- **+91-7669973262**: Third WhatsApp contact
 
 ### Phone Calls
 - Both numbers accept voice calls

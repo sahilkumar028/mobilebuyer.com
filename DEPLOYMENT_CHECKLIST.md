@@ -100,7 +100,7 @@ Value: https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
 - [ ] Services page shows "Coming Soon" message
 - [ ] Contact form submits to Google Sheets
 - [ ] Sell phone form submits to Google Sheets
-- [ ] WhatsApp links work: +91-9210657563, +91-9205124447
+- [ ] WhatsApp links work: +91-9210657563, +91-9205112447
 - [ ] Phone call links work
 - [ ] Email links work: praveen9@gmail.com, praveen@mobilebuyer.in
 
@@ -161,9 +161,9 @@ npm run build
 
 ### Verify These Work:
 - **WhatsApp**: https://wa.me/919210657563
-- **WhatsApp**: https://wa.me/919205124447  
+- **WhatsApp**: https://wa.me/919205112447  
 - **Phone**: tel:+919210657563
-- **Phone**: tel:+919205124447
+- **Phone**: tel:+919205112447
 - **Email**: mailto:praveen9@gmail.com
 - **Email**: mailto:praveen@mobilebuyer.in
 
