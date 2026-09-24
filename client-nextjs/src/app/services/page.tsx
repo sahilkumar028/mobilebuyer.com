@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services - Buy & Sell Phones | MobileBuyer.in',
+  title: 'Services - Buy & Sell Phones | MobilesBuyer.com',
   description: 'Explore our services: Buy certified refurbished phones, sell your old phone for cash, phone repair, and quality certification in Delhi NCR.',
   keywords: 'phone services delhi, buy refurbished phones, sell old phone, phone repair, mobile services delhi ncr',
 };

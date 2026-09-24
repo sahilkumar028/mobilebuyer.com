@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mobilebuyer.in'
+  const baseUrl = 'https://MobilesBuyer.com'
   
   return [
     {

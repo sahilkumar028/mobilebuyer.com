@@ -3,8 +3,8 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us - MobileBuyer.in | Trusted Since 2001',
-  description: 'Learn about MobileBuyer.in, founded by Praveen Sharma in 2001. 23+ years of experience in buying and selling refurbished phones in Delhi NCR.',
+  title: 'About Us - MobilesBuyer.com | Trusted Since 2001',
+  description: 'Learn about MobilesBuyer.com, founded by Praveen Sharma in 2001. 23+ years of experience in buying and selling refurbished phones in Delhi NCR.',
   keywords: 'about mobilebuyer, praveen sharma, second hand phone business, refurbished phones delhi, mobile buyer history',
 };
 
@@ -16,7 +16,7 @@ export default function About() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h1 className="text-4xl font-bold mb-4">About MobileBuyer.in</h1>
+            <h1 className="text-4xl font-bold mb-4">About MobilesBuyer.com</h1>
             <p className="text-xl">Trusted Since 2001 - Your Reliable Phone Partner</p>
           </div>
         </section>
@@ -29,7 +29,7 @@ export default function About() {
               
               <div className="space-y-6 text-gray-600">
                 <p className="text-lg">
-                  Founded in <strong>2001</strong> by <strong>Praveen Sharma</strong>, MobileBuyer.in has been serving the Delhi NCR region for over 23 years. What started as a small venture has grown into one of the most trusted names in the refurbished phone industry.
+                  Founded in <strong>2001</strong> by <strong>Praveen Sharma</strong>, MobilesBuyer.com has been serving the Delhi NCR region for over 23 years. What started as a small venture has grown into one of the most trusted names in the refurbished phone industry.
                 </p>
                 
                 <p>

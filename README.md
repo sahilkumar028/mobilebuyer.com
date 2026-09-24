@@ -1,8 +1,8 @@
-# MobileBuyer.in - Second Hand Phone Marketplace
+# MobilesBuyer.com - Second Hand Phone Marketplace
 
 🚀 **Live Demo**: [https://yourusername.github.io/mobilebuyer-in](https://yourusername.github.io/mobilebuyer-in)
 
-## 📱 About MobileBuyer.in
+## 📱 About MobilesBuyer.com
 
 India's most trusted platform for buying and selling certified refurbished second-hand phones. We specialize in professional phone refurbishment with quality assurance and warranty coverage.
 
@@ -169,8 +169,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### 📞 Contact
 
-- **Website**: [MobileBuyer.in](https://mobilebuyer.in)
-- **Email**: support@mobilebuyer.in
+- **Website**: [MobilesBuyer.com](https://MobilesBuyer.com)
+- **Email**: support@MobilesBuyer.com
 - **Phone**: +91 12345 67890
 
 ---

@@ -9,35 +9,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MobileBuyer.in - Buy & Sell Refurbished Second Hand Phones",
+  title: "MobilesBuyer.com - Buy & Sell Refurbished Second Hand Phones",
   description: "India's trusted platform for buying and selling refurbished second-hand phones since 2001. Founded by Praveen Sharma, serving Delhi NCR with certified pre-owned smartphones.",
   keywords: "second hand phones, refurbished phones, buy old phones, sell used phones, mobile buyer, pre-owned smartphones, certified refurbished mobiles, Delhi NCR",
   authors: [{ name: "Praveen Sharma" }, { name: "Sahil Kumar" }],
   robots: "index, follow",
   openGraph: {
-    title: "MobileBuyer.in - Buy & Sell Refurbished Second Hand Phones",
+    title: "MobilesBuyer.com - Buy & Sell Refurbished Second Hand Phones",
     description: "India's trusted platform for certified refurbished phones since 2001. Buy and sell second-hand smartphones with warranty in Delhi NCR.",
     type: "website",
     locale: "en_IN",
-    siteName: "MobileBuyer.in",
-    url: "https://mobilebuyer.in",
+    siteName: "MobilesBuyer.com",
+    url: "https://MobilesBuyer.com",
     images: [
       {
-        url: "https://mobilebuyer.in/og-image.jpg",
+        url: "https://MobilesBuyer.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MobileBuyer.in - India's Trusted Second Hand Phone Marketplace since 2001",
+        alt: "MobilesBuyer.com - India's Trusted Second Hand Phone Marketplace since 2001",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MobileBuyer.in - Refurbished Second Hand Phones",
+    title: "MobilesBuyer.com - Refurbished Second Hand Phones",
     description: "Buy and sell certified refurbished smartphones with warranty. India's most trusted second-hand phone marketplace since 2001.",
-    images: ["https://mobilebuyer.in/og-image.jpg"],
+    images: ["https://MobilesBuyer.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://mobilebuyer.in",
+    canonical: "https://MobilesBuyer.com",
   },
   verification: {
     google: "your-google-verification-code",

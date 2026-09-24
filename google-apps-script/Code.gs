@@ -1,4 +1,4 @@
-// Google Apps Script for MobileBuyer.in Form Submissions
+// Google Apps Script for MobilesBuyer.com Form Submissions
 // This script receives form data and saves it to Google Sheets
 
 function doPost(e) {
@@ -104,7 +104,7 @@ function doGet(e) {
   
   return output.setContent(JSON.stringify({
     status: 'OK', 
-    message: 'MobileBuyer.in Form Handler is running',
+    message: 'MobilesBuyer.com Form Handler is running',
     timestamp: new Date().toISOString(),
     method: 'GET'
   }));
@@ -275,7 +275,7 @@ function handleNewsletter(ss, data) {
 function sendEmailNotification(type, data) {
   try {
     // Replace with your email address
-    const adminEmail = 'admin@mobilebuyer.in';
+    const adminEmail = 'admin@MobilesBuyer.com';
     
     let subject, body;
     
@@ -446,7 +446,7 @@ function testContactFormSubmission() {
         timestamp: new Date().toISOString(),
         customerName: 'Test Customer',
         customerPhone: '9876543210',
-        customerEmail: 'test@mobilebuyer.in',
+        customerEmail: 'test@MobilesBuyer.com',
         phoneBrand: 'apple',
         phoneModel: 'iPhone 13',
         phoneCondition: 'good',
@@ -478,7 +478,7 @@ function testFormSubmission() {
         batteryHealth: 'excellent',
         customerName: 'Test Customer',
         customerPhone: '9876543210',
-        customerEmail: 'test@mobilebuyer.in',
+        customerEmail: 'test@MobilesBuyer.com',
         pickupAddress: 'Test Address, Mumbai',
         estimatedValue: 25000,
         status: 'Test Lead'

@@ -4,17 +4,17 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'MobileBuyer.in - Buy & Sell Refurbished Phones in Delhi NCR | Since 2001',
+  title: 'MobilesBuyer.com - Buy & Sell Refurbished Phones in Delhi NCR | Since 2001',
   description: 'India\'s most trusted marketplace for certified refurbished phones since 2001. Buy second-hand smartphones with warranty or sell your old phone for instant cash in Delhi, Noida, Gurgaon, Faridabad & Ghaziabad.',
   keywords: 'buy second hand phones Delhi NCR, sell old phone cash Delhi, refurbished phones warranty Noida, certified pre-owned smartphones Gurgaon, mobile buyer Faridabad, second hand phone marketplace Ghaziabad',
   openGraph: {
-    title: 'MobileBuyer.in - Delhi NCR\'s Trusted Second Hand Phone Marketplace Since 2001',
+    title: 'MobilesBuyer.com - Delhi NCR\'s Trusted Second Hand Phone Marketplace Since 2001',
     description: 'Buy certified refurbished phones with warranty or sell your old phone for instant cash. Serving Delhi, Noida, Gurgaon, Faridabad & Ghaziabad since 2001.',
-    url: 'https://mobilebuyer.in',
+    url: 'https://MobilesBuyer.com',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mobilebuyer.in',
+    canonical: 'https://MobilesBuyer.com',
   },
 };
 
@@ -44,10 +44,10 @@ export default function Home() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "Organization",
-                  "name": "MobileBuyer.in",
+                  "name": "MobilesBuyer.com",
                   "description": "India's trusted platform for buying and selling refurbished second-hand phones since 2001",
-                  "url": "https://mobilebuyer.in",
-                  "logo": "https://mobilebuyer.in/logo.png",
+                  "url": "https://MobilesBuyer.com",
+                  "logo": "https://MobilesBuyer.com/logo.png",
                   "foundingDate": "2001",
                   "founder": {
                     "@type": "Person",
@@ -76,7 +76,7 @@ export default function Home() {
                       "availableLanguage": ["English", "Hindi"]
                     }
                   ],
-                  "email": ["praveen9@gmail.com", "praveen@mobilebuyer.in"],
+                  "email": ["praveen9@gmail.com", "praveen@MobilesBuyer.com"],
                   "address": {
                     "@type": "PostalAddress",
                     "addressRegion": "Delhi NCR",
@@ -113,7 +113,7 @@ export default function Home() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
-              Why Choose MobileBuyer.in?
+              Why Choose MobilesBuyer.com?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">

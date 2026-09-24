@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://mobilebuyer.in/sitemap.xml',
+    sitemap: 'https://MobilesBuyer.com/sitemap.xml',
   }
 }

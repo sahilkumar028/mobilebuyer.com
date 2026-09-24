@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
-            MobileBuyer.in
+            MobilesBuyer.com
           </Link>
 
           {/* Desktop Navigation */}

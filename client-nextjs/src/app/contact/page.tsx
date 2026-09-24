@@ -143,9 +143,9 @@ export default function Contact() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ContactPage",
-              "name": "Contact MobileBuyer.in - Get Quote for Your Phone",
-              "description": "Contact MobileBuyer.in for instant phone quotes, refurbishment services, and customer support",
-              "url": "https://mobilebuyer.in/contact"
+              "name": "Contact MobilesBuyer.com - Get Quote for Your Phone",
+              "description": "Contact MobilesBuyer.com for instant phone quotes, refurbishment services, and customer support",
+              "url": "https://MobilesBuyer.com/contact"
             })
           }}
         />
@@ -153,7 +153,7 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 to-blue-700 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h1 className="text-4xl font-bold mb-4">Contact MobileBuyer.in</h1>
+            <h1 className="text-4xl font-bold mb-4">Contact MobilesBuyer.com</h1>
             <p className="text-xl">Get instant quotes for your old phone, find the perfect refurbished smartphone, or reach out for any assistance. We're here to help!</p>
           </div>
         </section>
@@ -177,7 +177,7 @@ export default function Contact() {
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Email Us</h3>
                 <p className="text-gray-600 mb-4">Send us your queries</p>
                 <a href="mailto:work.praveen9@gmail.com" className="text-purple-600 hover:text-purple-800 font-semibold block">work.praveen9@gmail.com</a>
-                <a href="mailto:praveen@mobilebuyer.in" className="text-purple-600 hover:text-purple-800 font-semibold block">praveen@mobilebuyer.in</a>
+                <a href="mailto:praveen@MobilesBuyer.com" className="text-purple-600 hover:text-purple-800 font-semibold block">praveen@MobilesBuyer.com</a>
                 <small className="text-gray-500">Response within 24 hours</small>
               </div>
 
@@ -345,7 +345,7 @@ export default function Contact() {
               {/* Info Section */}
               <div className="space-y-8">
                 <div className="bg-white rounded-xl shadow-lg p-8">
-                  <h3 className="text-xl font-bold mb-4 text-gray-800">Why Choose MobileBuyer.in?</h3>
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">Why Choose MobilesBuyer.com?</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-center"><span className="text-green-500 mr-2">✅</span> Instant price quotes</li>
                     <li className="flex items-center"><span className="text-green-500 mr-2">✅</span> Free doorstep pickup</li>

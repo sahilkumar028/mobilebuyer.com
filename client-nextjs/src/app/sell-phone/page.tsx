@@ -440,10 +440,10 @@ export default function SellPhone() {
   return (
     <>
       <Head>
-        <title>Sell Your Phone - Get Expert Quote | MobileBuyer.in</title>
+        <title>Sell Your Phone - Get Expert Quote | MobilesBuyer.com</title>
         <meta name="description" content="Submit your phone details and our expert will contact you within 2 hours with a personalized quote. Best prices guaranteed with free pickup in Delhi NCR." />
         <meta name="keywords" content="sell phone online, sell old phone cash, phone buyback India, get phone quote, sell smartphone online Delhi NCR" />
-        <link rel="canonical" href="https://mobilebuyer.in/sell-phone" />
+        <link rel="canonical" href="https://MobilesBuyer.com/sell-phone" />
       </Head>
       <Header />
       <main className="min-h-screen bg-gray-50">

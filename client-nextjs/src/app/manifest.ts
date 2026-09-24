@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
  
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'MobileBuyer.in - Second Hand Phone Marketplace',
+    name: 'MobilesBuyer.com - Second Hand Phone Marketplace',
     short_name: 'MobileBuyer',
     description: 'Buy and sell certified refurbished second-hand phones with warranty',
     start_url: '/',

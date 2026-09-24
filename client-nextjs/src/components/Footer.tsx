@@ -7,13 +7,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-blue-400">MobileBuyer.in</h3>
+            <h3 className="text-xl font-bold mb-4 text-blue-400">MobilesBuyer.com</h3>
             <p className="text-gray-300 mb-4">
               India's trusted platform for buying and selling refurbished second-hand phones since 2001. Founded by Praveen Sharma, serving Delhi NCR with quality assurance.
             </p>
             <div className="text-gray-300 space-y-2">
               <p>📧 praveen9@gmail.com</p>
-              <p>� +praveen@mobilebuyer.in</p>
+              <p>� +praveen@MobilesBuyer.com</p>
               <p>📞 +91-9210657563</p>
               <p>📞 +91-9205112447</p>
               <p>📞 +91-7669973262</p>
@@ -61,7 +61,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 MobileBuyer.in. All rights reserved. | Founded by Praveen Sharma in 2001</p>
+          <p>&copy; 2024 MobilesBuyer.com. All rights reserved. | Founded by Praveen Sharma in 2001</p>
           <p className="mt-2">Website developed by Sahil Kumar | Made with ❤️ for sustainable technology</p>
         </div>
       </div>

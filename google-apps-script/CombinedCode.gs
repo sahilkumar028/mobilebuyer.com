@@ -1,5 +1,5 @@
 /**
- * Combined Google Apps Script for MobileBuyer.in
+ * Combined Google Apps Script for MobilesBuyer.com
  * Handles both static and dynamic phone data management
  * Includes form submissions, dynamic data loading, and email notifications
  */
@@ -28,7 +28,7 @@ function doGet(e) {
         // Default GET response for testing
         return output.setContent(JSON.stringify({
           status: 'OK', 
-          message: 'MobileBuyer.in Form Handler is running',
+          message: 'MobilesBuyer.com Form Handler is running',
           timestamp: new Date().toISOString(),
           availableActions: ['getCompanies', 'getModels', 'getStorage']
         }));
